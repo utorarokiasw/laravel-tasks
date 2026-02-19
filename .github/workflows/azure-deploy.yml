@@ -1,7 +1,11 @@
 name: Deploy Resource to Azure
 on:
   workflow_dispatch:
-  
+    inputs:
+      owner_name:
+        description: 'Who is the creator of this resource?'
+        required: true
+        
 permissions:
   id-token: write # Required for requesting the JWT
   contents: read  # Required for actions/checkout
