@@ -33,4 +33,7 @@ jobs:
               --resource-group "N278-EIS-AROKIASW-RG1" \
               --location "eastus" \
               --sku Standard_LRS \
-              --tags "CreatedOn=$CURRENT_DATE" "CreatedBy=arokiasw"
+              --tags \
+              "CreatedOn=$CURRENT_DATE" \
+              "CreatedBy=${{github.event.inputs.owner_name}}" \
+              "DeployedBy=GitHubActions"
