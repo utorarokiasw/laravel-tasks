@@ -3,12 +3,6 @@
 
 name: Build and deploy PHP app to Azure Web App - n278-eis-fsm-app3
 
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -67,4 +61,5 @@ jobs:
           app-name: 'n278-eis-fsm-app3'
           slot-name: 'Production'
           package: .
+
           
