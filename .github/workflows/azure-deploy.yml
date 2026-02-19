@@ -39,6 +39,8 @@ jobs:
               --sku Standard_LRS \
               --min-tls-version TLS1_2 \
               --allow-blob-public-access false \
+              --public-network-access Disabled \
+              --default-action Deny \
               --tags \
               "CreatedOn=$CURRENT_DATE" \
               "CreatedBy=${{github.event.inputs.owner_name}}" \
