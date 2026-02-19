@@ -37,6 +37,8 @@ jobs:
               --resource-group "N278-EIS-AROKIASW-RG1" \
               --location "canadacentral" \
               --sku Standard_LRS \
+              --min-tls-version TLS1_2 \
+              --allow-blob-public-access false \
               --tags \
               "CreatedOn=$CURRENT_DATE" \
               "CreatedBy=${{github.event.inputs.owner_name}}" \
