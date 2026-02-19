@@ -1,8 +1,7 @@
 name: Deploy Resource to Azure
 on:
-  push:
-
-
+  workflow_dispatch:
+  
 permissions:
   id-token: write # Required for requesting the JWT
   contents: read  # Required for actions/checkout
