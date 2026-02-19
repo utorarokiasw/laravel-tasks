@@ -35,7 +35,7 @@ jobs:
             az storage account create \
               --name "uniquestorage$(date +%s)" \
               --resource-group "N278-EIS-AROKIASW-RG1" \
-              --location "eastus" \
+              --location "canadacentral" \
               --sku Standard_LRS \
               --tags \
               "CreatedOn=$CURRENT_DATE" \
