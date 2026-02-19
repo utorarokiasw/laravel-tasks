@@ -24,9 +24,13 @@ jobs:
         uses: azure/cli@v2
         with:
           inlineScript: |
+            # Get current date in YYYY-MM-DD format
+            CURRENT_DATE=$(date +%Y-%m-%d)
+            
             # Replace 'my-resource-group' with your actual RG name
             az storage account create \
               --name "uniquestorage$(date +%s)" \
               --resource-group "N278-EIS-AROKIASW-RG1" \
               --location "eastus" \
-              --sku Standard_LRS
+              --sku Standard_LRS \
+              --tags "CreatedOn=$CURRENT_DATE" "CreatedBy=arokiasw"
